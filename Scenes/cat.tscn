@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c5at74bd6h5nd"]
+
+[ext_resource type="Texture2D" uid="uid://d1umnp5ib3dh" path="res://Sprites/dont cry.png" id="1_hcucf"]
+[ext_resource type="Script" uid="uid://jqa05bbhlcvv" path="res://Scripts/cat.gd" id="2_52fj1"]
+[ext_resource type="AudioStream" uid="uid://0oqws3qc81v2" path="res://Sounds/meow.ogg" id="3_r2uub"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_52fj1"]
+size = Vector2(320, 320)
+
+[node name="Cat" type="Sprite2D" unique_id=792794582]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_hcucf")
+script = ExtResource("2_52fj1")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1448016789]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=82974679]
+visible = false
+shape = SubResource("RectangleShape2D_52fj1")
+
+[node name="meow" type="AudioStreamPlayer2D" parent="." unique_id=634023468]
+stream = ExtResource("3_r2uub")
+
+[connection signal="input_event" from="Area2D" to="." method="_area2d_input"]

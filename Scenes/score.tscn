@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://tid8w7un0il4"]
+
+[ext_resource type="Script" uid="uid://d3mm0bxmcmslf" path="res://Scripts/score.gd" id="1_t1x8i"]
+[ext_resource type="AudioStream" uid="uid://84nibvmu4gc7" path="res://Sounds/brain.ogg" id="2_hnwbn"]
+
+[node name="score" type="Node2D" unique_id=1427243180]
+script = ExtResource("1_t1x8i")
+
+[node name="Label" type="Label" parent="." unique_id=1509816253]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 50
+text = "your score:
+0"
+horizontal_alignment = 1
+
+[node name="fart" type="AudioStreamPlayer2D" parent="." unique_id=1532961]
+stream = ExtResource("2_hnwbn")

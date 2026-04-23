@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ddn52gutepq6o"]
+
+[ext_resource type="Script" uid="uid://d3t8lrte2sdpn" path="res://Scripts/timer.gd" id="1_qdhxh"]
+
+[node name="Node2D" type="Node2D" unique_id=772561987]
+script = ExtResource("1_qdhxh")
+
+[node name="Label" type="Label" parent="." unique_id=798212407]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 100
+text = "0"
+
+[node name="Timer2" type="Timer" parent="." unique_id=1114596816]
+one_shot = true
